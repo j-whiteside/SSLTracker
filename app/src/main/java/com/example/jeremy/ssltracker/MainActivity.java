@@ -8,21 +8,35 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+    //Array
+
+    //List View: {views:items.xml}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        populateListView();
+        
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    private void populateListView() {
+        //Create List of items
+        String[] myItems = {"red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick", "meatspin.com", "red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick", "red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick", "red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick", "red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick"};
+
+        //Build adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.items, myItems);
+
+        //Config list view
+        ListView list = (ListView)findViewById(R.id.listView);
+        list.setAdapter(adapter);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
