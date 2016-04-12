@@ -11,7 +11,9 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class WebTrackerView extends RelativeLayout
 {
@@ -29,20 +31,20 @@ public class WebTrackerView extends RelativeLayout
 
         button = new Button(context);
         button.setLayoutParams(new ViewGroup.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-        button.setText("ASDF BUTTON");
+        //button.setText("ASDF BUTTON");
         this.addView(button);
 
-        text.bringToFront();
+        //text.bringToFront();
         button.invalidate();
     }
 
     public void updateViewData(WebTrackerData data)
     {
-        Date now = new Date();
+        GregorianCalendar now = new GregorianCalendar();
 
-        int remaining = now.compareTo(data.getRenewal());
+        long diffDays = 0;
 
-        button.setText(data.getType() + " : " + data.getName() + " : " + (remaining > 99 ? "99+" : remaining) + "d");
+        button.setText(data.getType() + " : " + data.getName() + " : " + (diffDays > 99 ? "99+" : diffDays) + "d");
     }
 
 

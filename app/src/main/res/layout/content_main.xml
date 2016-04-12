@@ -21,28 +21,11 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.example.jeremy.ssltracker.WebTrackerView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/view" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.example.jeremy.ssltracker.WebTrackerView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/view2" />
-            </TableRow>
+            android:layout_height="wrap_content"
+            android:id="@+id/mainLayout"
+            android:stretchColumns="0">
 
         </TableLayout>
     </ScrollView>
+
 </RelativeLayout>

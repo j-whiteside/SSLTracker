@@ -1,6 +1,7 @@
 package com.example.jeremy.ssltracker;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * Created by Jeremy on 4/11/2016.
@@ -8,10 +9,10 @@ import java.util.Date;
 public class WebTrackerData
 {
     private String name;
-    private Date renewal;
+    private GregorianCalendar renewal;
     private String type;
 
-    public WebTrackerData(String name, Date renewal, String type)
+    public WebTrackerData(String name, GregorianCalendar renewal, String type)
     {
         this.name = name;
         this.renewal = renewal;
@@ -26,11 +27,11 @@ public class WebTrackerData
         this.name = name;
     }
 
-    public Date getRenewal() {
+    public GregorianCalendar getRenewal() {
         return renewal;
     }
 
-    public void setRenewal(Date renewal) {
+    public void setRenewal(GregorianCalendar renewal) {
         this.renewal = renewal;
     }
 
