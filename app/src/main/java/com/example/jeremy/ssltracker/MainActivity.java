@@ -1,25 +1,11 @@
 package com.example.jeremy.ssltracker;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
-import android.util.AttributeSet;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
@@ -61,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             TableRow r = new TableRow(this.getApplicationContext(), null);
             r.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
 
-            TableLayout t = (TableLayout) findViewById(R.id.mainLayout);
+            TableLayout t = (TableLayout) findViewById(R.id.mainTableLayout);
 
             t.addView(r);
             r.addView(w);
