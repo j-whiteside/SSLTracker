@@ -15,41 +15,12 @@ public class MainActivity extends AppCompatActivity {
     //Array
 
     //List View: {views:items.xml}
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        populateListView();
         
-    }
-
-    private void populateListView() {
-        //Create List of items
-        String[] myItems = {"red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick", "meatspin.com", "red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick", "red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick", "red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick", "red", "blue", "Google", "Halloran.ca", "amazon.com", "ebay.exe", "microsoft.com", "virus.dll", "telusapp.com/patrick"};
-
-        //Build adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.items, myItems);
-
-        //Config list view
-        ListView list = (ListView)findViewById(R.id.listView);
-        list.setAdapter(adapter);
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
