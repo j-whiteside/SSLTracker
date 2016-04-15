@@ -16,13 +16,30 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class WebTrackerView extends Button
+public class WebTrackerView extends RelativeLayout
 {
+    Button button;
+    TextView textview;
+
     public WebTrackerView(Context context, AttributeSet attributes)
     {
         super(context, attributes);
-        this.setBackgroundColor(Color.TRANSPARENT);
-        this.setTextColor(Color.BLACK);
+
+        button = new Button(context);
+        textview = new TextView(context);
+
+
+        button.setLayoutParams(new ViewGroup.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        button.setBackground(null);
+        button.setTextColor(Color.BLACK);
+
+        this.addView(button);
+
+        //ViewGroup.LayoutParams buttonParams = new ViewGroup.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        //buttonParams.weight = 1.0f;
+        //buttonParams.gravity = Gravity.TOP;
+
+        //button.setLayoutParams(buttonParams);
     }
 
     public void updateViewData(WebTrackerData data)
@@ -32,7 +49,8 @@ public class WebTrackerView extends Button
         long diff = data.getRenewal().getTimeInMillis() - currentDate.getTimeInMillis();
         long diffDays = diff / (24 * 60 * 60 * 1000);
 
-        this.setText(data.getType() + " : " + data.getName() + " : " + (diffDays > 99 ? "99+" : diffDays) + "d");
+        button.setText(data.getType() + " : " + data.getName() + " : " + (diffDays > 99 ? "99+" : diffDays) + "d");
+        button.setTextAlignment(TEXT_ALIGNMENT_VIEW_START);
     }
 
 
