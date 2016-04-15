@@ -53,6 +53,9 @@ public class WebTrackerView extends RelativeLayout
         button.setTextAlignment(TEXT_ALIGNMENT_VIEW_START);
     }
 
-
+    public Button getButton()
+    {
+        return button;
+    }
 }
 

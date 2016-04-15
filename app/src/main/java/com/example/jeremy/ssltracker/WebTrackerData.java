@@ -1,12 +1,13 @@
 package com.example.jeremy.ssltracker;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
  * Created by Jeremy on 4/11/2016.
  */
-public class WebTrackerData
+public class WebTrackerData implements Serializable
 {
     private String name;
     private GregorianCalendar renewal;
