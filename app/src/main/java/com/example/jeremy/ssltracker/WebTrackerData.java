@@ -11,9 +11,9 @@ public class WebTrackerData implements Serializable
 {
     private String name;
     private GregorianCalendar renewal;
-    private String type;
+    private int type;
 
-    public WebTrackerData(String name, GregorianCalendar renewal, String type)
+    public WebTrackerData(String name, GregorianCalendar renewal, int type)
     {
         this.name = name;
         this.renewal = renewal;
@@ -36,11 +36,11 @@ public class WebTrackerData implements Serializable
         this.renewal = renewal;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 }
