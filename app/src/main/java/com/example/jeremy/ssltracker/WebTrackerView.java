@@ -65,7 +65,7 @@ public class WebTrackerView extends RelativeLayout
         nameTextView.setTextColor(Color.BLACK);
         nameTextView.setTextSize(25);
         nameTextView.setGravity(CENTER_IN_PARENT);
-        nameTextViewParams.setMargins(0, 0, 30, 0);
+        nameTextViewParams.setMargins(40, 0, 30, 0);
         nameTextViewParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         nameTextView.setLayoutParams(nameTextViewParams);
         this.addView(nameTextView);

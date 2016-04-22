@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Jeremy\\Documents\\Projects\\AndroidStudio\\SSLTracker\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\Jeremy\\Documents\\Projects\\AndroidStudio\\SSLTracker\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
         "merged": "C:\\Users\\Jeremy\\Documents\\Projects\\AndroidStudio\\SSLTracker-master-master\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "C:\\Users\\Jeremy\\Documents\\Projects\\AndroidStudio\\SSLTracker-master-master\\app\\src\\main\\res\\menu\\menu_main.xml"
     }
